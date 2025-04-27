@@ -1,0 +1,16 @@
+{
+  "name": "park-hunt-be",
+  "version": "1.0.0",
+  "main": "server.js",
+  "author": "Ishwor karki",
+  "license": "MIT",
+  "scripts": {
+    "dev":"nodemon server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "mongoose": "^8.13.3",
+    "nodemon": "^3.1.10"
+  }
+}
