@@ -1,0 +1,16 @@
+@rootUrl=http://localhost:8080/api/v1
+@LineEp={{rootUrl}}/line
+
+POST {{LineEp}}
+Content-Type: application/json
+
+{
+  "name": "Main Street Parking",
+  "line": [
+    { "lat": -33.949156, "lng": 151.226473 },
+    { "lat": -33.949194, "lng": 151.226755 }
+  ]
+}
+
+### 
+GET {{LineEp}}
