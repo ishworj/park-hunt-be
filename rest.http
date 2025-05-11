@@ -14,3 +14,31 @@ Content-Type: application/json
 
 ### 
 GET {{LineEp}}
+
+###
+POST {{LineEp}}/create
+Content-Type: application/json
+
+{
+  "type": "Free",
+  "time": "24/7",
+  "availability": "All day",
+  "price": 0,
+  "currency": "AUD",
+  "spaces": 10,
+  "description": "Quiet residential street near the park. No signage. Good for overnight parking.",
+  "location": {
+    "type": "LineString",
+    "coordinates": [
+      [151.226473, -33.949156],
+      [151.226755, -33.949194]
+    ],
+    "address": {
+      "street": "Clovelly Road",
+      "city": "Sydney",
+      "state": "NSW",
+      "country": "Australia",
+      "postalCode": "2031"
+    }
+  }
+}

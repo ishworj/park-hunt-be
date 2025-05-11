@@ -1,4 +1,5 @@
 import { createNewLineDB, getParkingLineDB } from "../models/ParkingModel.js";
+import { createNewStreetLineDB } from "../models/StreetParkingModel.js";
 
 export const createNewLine = async (req, res, next) => {
   try {
@@ -28,3 +29,19 @@ export const getParkingLines = async (req, res, next) => {
     });
   }
 };
+
+
+export const createStreetParkingLine = async (req, res, next) => {
+  try {
+    const newLine = await createNewStreetLineDB(req.body);
+    res.status(201).json({
+      status: "success",
+      newLine,
+    });
+  } catch (error) {
+    next({
+      message: "Error while adding new parking line",
+      errorMessage: error.message,
+    });
+  }
+}
